@@ -14,10 +14,10 @@
                     <th>Kode</th>
                     <th>Nama</th>
                     <th>Jenis Kelamin</th>
-                    <th>Tempat lahir</th>
+                    <th>Tempat Lahir</th>
                     <th>Tanggal Lahir</th>
                     <th>Email</th>
-                    <th>kartu</th>
+                    <th>Kartu</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -30,12 +30,12 @@
                         <td><?=$nomor?></td>
                         <td><?=$row['kode']?></td>
                         <td><?=$row['nama']?></td>
-                        <td><?=$row['Jk']?></td>
-                        <td><?=$row['tamp_lahir']?></td>
-                        <td><?=$row['Tgl_lahir']?></td>
-                        <td><?=$row['Email']?></td>
-                        <td><?=$row['Kartu_id']?></td>
-                        <td>
+                        <td><?=$row['jk']?></td>
+                        <td><?=$row['tmp_lahir']?></td>
+                        <td><?=$row['tgl_lahir']?></td>
+                        <td><?=$row['email']?></td>
+                        <td><?=$row['kartu_id']?></td>
+
 <a class="btn btn-primary" href="view_produk.php?id=<?=$row['id']?>">View</a>
 <a class="btn btn-primary" href="form_produk.php?idedit=<?=$row['id']?>">Edit</a>
 <a class="btn btn-primary" href="delete_produk.php?iddel=<?=$row['id']?>"

@@ -1,8 +1,8 @@
-<?php 
-require_once 'dbkoneksi.php';
+<?php
+    require_once "dbkoneksi.php"
 ?>
-            
-<form method="POST" action="proses_produk.php">
+
+<form method="POST" action="proses_pelanggan.php">
   <div class="form-group row">
     <label for="kode" class="col-4 col-form-label">Kode</label> 
     <div class="col-8">
@@ -32,7 +32,7 @@ require_once 'dbkoneksi.php';
     </div>
   </div>
   <div class="form-group row">
-    <label for="harga_beli" class="col-4 col-form-label">Harga Beli</label> 
+    <label for="jenis_kelamin" class="col-4 col-form-label">Jenis Kelamin</label> 
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -40,13 +40,15 @@ require_once 'dbkoneksi.php';
             <i class="fa fa-arrow-circle-o-left"></i>
           </div>
         </div> 
-        <input id="harga_beli" name="harga_beli" 
-        value="" type="text" class="form-control">
+        <input id="jk" name="jk" 
+        value="L" type="radio" class="form-control">Laki-Laki
+        <input id="jk" name="jk" 
+        value="P" type="radio" class="form-control">Perempuan
       </div>
     </div>
   </div>
   <div class="form-group row">
-    <label for="stok" class="col-4 col-form-label">Stok</label> 
+    <label for="stok" class="col-4 col-form-label">Tempat Lahir</label> 
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -54,13 +56,13 @@ require_once 'dbkoneksi.php';
             <i class="fa fa-arrow-circle-up"></i>
           </div>
         </div> 
-        <input id="stok" name="stok" value=""
+        <input id="tmp_lahir" name="tmp_lahir" value=""
         type="text" class="form-control">
       </div>
     </div>
   </div>
   <div class="form-group row">
-    <label for="min_stok" class="col-4 col-form-label">Minimum Stok</label> 
+    <label for="min_stok" class="col-4 col-form-label">Tanggal Lahir</label> 
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -68,20 +70,35 @@ require_once 'dbkoneksi.php';
             <i class="fa fa-arrow-circle-right"></i>
           </div>
         </div> 
-        <input id="min_stok" name="min_stok" 
+        <input id="tgl_lahir" name="tgl_lahir" 
         value=""
-        type="text" class="form-control">
+        type="date" class="form-control">
       </div>
     </div>
   </div>
   <div class="form-group row">
-    <label for="jenis" class="col-4 col-form-label">Jenis Produk</label> 
+    <label for="min_stok" class="col-4 col-form-label">Email</label> 
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-arrow-circle-right"></i>
+          </div>
+        </div> 
+        <input id="email" name="email" 
+        value=""
+        type="email" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="kartu_id" class="col-4 col-form-label">Kartu</label> 
     <div class="col-8">
         <?php 
-            $sqljenis = "SELECT * FROM jenis_produk";
+            $sqljenis = "SELECT * FROM kartu";
             $rsjenis = $dbh->query($sqljenis);
         ?>
-      <select id="jenis" name="jenis" class="custom-select">
+      <select id="kartu_id" name="kartu_id" class="custom-select">
           <?php 
             foreach($rsjenis as $rowjenis){
          ?>
