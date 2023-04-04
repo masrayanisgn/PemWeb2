@@ -18,7 +18,7 @@ require_once 'dbkoneksi.php';
    $ar_data[]=$_jk;// 3
    $ar_data[]=$_tmp_lahir;
    $ar_data[]=$_tgl_lahir;
-   $ar_data[]=$_email;
+   $ar_data[]=$_email; // ? 7
    $ar_data[]=$_kartu_id; // ? 7
 
    if($_proses == "Simpan"){
@@ -35,5 +35,5 @@ require_once 'dbkoneksi.php';
     $st->execute($ar_data);
    }
 
-   header('location:list_pelanggan.php');
+   header('location:list_produk.php');
 ?>

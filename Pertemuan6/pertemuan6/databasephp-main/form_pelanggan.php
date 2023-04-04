@@ -1,7 +1,7 @@
-<?php
-    require_once "dbkoneksi.php"
+<?php 
+require_once 'dbkoneksi.php';
 ?>
-
+            
 <form method="POST" action="proses_pelanggan.php">
   <div class="form-group row">
     <label for="kode" class="col-4 col-form-label">Kode</label> 
@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="form-group row">
-    <label for="nama" class="col-4 col-form-label">Nama Pelanggan</label> 
+    <label for="nama" class="col-4 col-form-label">Nama pelanggan</label> 
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -32,7 +32,7 @@
     </div>
   </div>
   <div class="form-group row">
-    <label for="jenis_kelamin" class="col-4 col-form-label">Jenis Kelamin</label> 
+    <label for="harga_beli" class="col-4 col-form-label">Jenis Kelamin</label> 
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -41,9 +41,9 @@
           </div>
         </div> 
         <input id="jk" name="jk" 
-        value="L" type="radio" class="form-control">Laki-Laki
+        value="L" type="radio" class="form-control">Laki - Laki
         <input id="jk" name="jk" 
-        value="P" type="radio" class="form-control">Perempuan
+        value="P" type="radio" class="form-control">perempuan
       </div>
     </div>
   </div>
@@ -62,22 +62,22 @@
     </div>
   </div>
   <div class="form-group row">
-    <label for="min_stok" class="col-4 col-form-label">Tanggal Lahir</label> 
+    <label for="stok" class="col-4 col-form-label">Tanggal Lahir</label> 
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <i class="fa fa-arrow-circle-right"></i>
+            <i class="fa fa-arrow-circle-up"></i>
           </div>
         </div> 
-        <input id="tgl_lahir" name="tgl_lahir" 
-        value=""
+        <input id="tgl_lahir" name="tgl_lahir" value=""
         type="date" class="form-control">
       </div>
     </div>
   </div>
+  
   <div class="form-group row">
-    <label for="min_stok" class="col-4 col-form-label">Email</label> 
+    <label for="min_stok" class="col-4 col-form-label"> Email</label> 
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -92,7 +92,7 @@
     </div>
   </div>
   <div class="form-group row">
-    <label for="kartu_id" class="col-4 col-form-label">Kartu</label> 
+    <label for="jenis" class="col-4 col-form-label">Kartu</label> 
     <div class="col-8">
         <?php 
             $sqljenis = "SELECT * FROM kartu";

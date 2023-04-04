@@ -2,22 +2,16 @@
     require_once 'dbkoneksi.php';
 ?>
 <?php 
-   $sql = "SELECT * FROM pelanggan";
+   $sql = "SELECT * FROM produk";
    $rs = $dbh->query($sql);
 ?>
 
-      <a class="btn btn-success" href="form_pelanggan.php" role="button">Create Pelanggan</a>
+      <a class="btn btn-success" href="form_produk.php" role="button">Create Produk</a>
         <table class="table" width="100%" border="1" cellspacing="2" cellpadding="2">
             <thead>
                 <tr>
-                    <th>No</th>
-                    <th>Kode</th>
-                    <th>Nama</th>
-                    <th>Jenis Kelamin</th>
-                    <th>Tempat Lahir</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Email</th>
-                    <th>Kartu</th>
+                    <th>No</th><th>Kode</th><th>Nama</th>
+                    <th>Harga Jual</th><th>Qty</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -30,12 +24,9 @@
                         <td><?=$nomor?></td>
                         <td><?=$row['kode']?></td>
                         <td><?=$row['nama']?></td>
-                        <td><?=$row['jk']?></td>
-                        <td><?=$row['tmp_lahir']?></td>
-                        <td><?=$row['tgl_lahir']?></td>
-                        <td><?=$row['email']?></td>
-                        <td><?=$row['kartu_id']?></td>
-
+                        <td><?=$row['harga_jual']?></td>
+                        <td><?=$row['stok']?></td>
+                        <td>
 <a class="btn btn-primary" href="view_produk.php?id=<?=$row['id']?>">View</a>
 <a class="btn btn-primary" href="form_produk.php?idedit=<?=$row['id']?>">Edit</a>
 <a class="btn btn-primary" href="delete_produk.php?iddel=<?=$row['id']?>"
